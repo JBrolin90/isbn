@@ -1,0 +1,29 @@
+[project]
+name = "isbn"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "mypy[dmypy]>=1.18.2",
+]
+
+[tool.ruff.lint]
+#select = ["ALL"]
+#ignore = ["ANN101", "ANN102", "COM812", "ISC001"]  # optional, removes noise
+
+[tool.ruff.lint.extend-per-file-ignores]
+"__init__.py" = ["F401"]
+
+
+[tool.ruff]
+select = ["E", "F", "UP", "B", "SIM", "I"]
+# Add type checking rules if available in your Ruff version
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
